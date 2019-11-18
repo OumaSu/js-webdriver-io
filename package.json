@@ -1,0 +1,35 @@
+{
+  "name": "js-webdriver-io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:included_tests": "wdio run wdio.conf.js",
+    "lint:js": "eslint . --ext .js,.jsx",
+    "lint:js:fix": "npm run lint:js -- --fix"
+  },
+  "keywords": [],
+  "author": "s.kazantsev",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "@wdio/cli": "^5.16.7",
+    "@wdio/local-runner": "^5.16.7",
+    "@wdio/mocha-framework": "^5.16.5",
+    "@wdio/spec-reporter": "^5.16.5",
+    "@wdio/sync": "^5.16.5",
+    "chromedriver": "^78.0.1",
+    "eslint": "^6.6.0",
+    "husky": "^3.1.0",
+    "wdio-chromedriver-service": "^5.0.2",
+    "wdio-docker-service": "^2.1.4",
+    "wdio-intercept-service": "^3.0.2",
+    "webdriverio": "^5.16.7"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint:write",
+      "pre-push": "npm run lint"
+    }
+  }
+}
