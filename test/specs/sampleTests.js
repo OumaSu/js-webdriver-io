@@ -1,7 +1,7 @@
-import { page } from "../../src/utils/pageFactory";
+const pf = require("../../src/utils/pageFactory");
 
-describe("sample test", () => {
-  it("test name", () => {
-    page("googlePage").searchByText("qweqwedqwe");
+describe("sample test", function() {
+  it("test name", function() {
+    pf.page("googlePage").open().searchByText("qweqwedqwe");
   });
 });

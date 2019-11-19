@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start:included_tests": "npx wdio run wdio.conf.js",
+    "start": "npx wdio run wdio.conf.js",
     "lint": "npx prettier --write \"**/*.js\""
   },
   "keywords": [],

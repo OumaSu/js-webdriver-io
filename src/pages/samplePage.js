@@ -1,14 +1,13 @@
-import basePage from "./basePage";
-
+const basePage = require("./basePage");
 const assert = require("assert");
 
-export default class samplePage extends basePage {
+ class samplePage extends basePage {
   constructor() {
     super("localhost");
     this.title = "samplePage";
   }
 
-  isLoaded = () =>
+  isLoaded() {
     browser.waitUntil(() => {
       assert.equal(
         browser.getTitle(),
@@ -16,4 +15,7 @@ export default class samplePage extends basePage {
         `Load page ${typeof this} failed`
       );
     });
+  }
 }
+
+module.exports= samplePage;
