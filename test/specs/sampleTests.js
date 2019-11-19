@@ -1,5 +1,5 @@
-const assert = require('assert')
+const assert = require("assert");
 
-describe('sample test', () => {
-    it('test name', () => { })
-})
+describe("sample test", () => {
+  it("test name", () => {});
+});
