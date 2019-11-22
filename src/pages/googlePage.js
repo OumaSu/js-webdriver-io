@@ -1,7 +1,8 @@
-const basePage = require("./basePage");
+import basePage from "./basePage";
+
 const assert = require("assert");
 
- class googlePage extends basePage {
+export default class googlePage extends basePage {
   constructor() {
     super("https://www.google.com/");
     this.title = "Google";
@@ -9,14 +10,16 @@ const assert = require("assert");
 
   open() {
     browser.navigateTo(this.url);
-    assert.ok(this.isLoaded())
+    assert.ok(this.isLoaded());
     return this;
   }
 
   searchBtn() {
-     return browser.$$('//*[@value="Поиск в Google"]').filter(i => i.isDisplayed()); 
+    return browser
+      .$$('//*[@value="Поиск в Google"]')
+      .filter(i => i.isDisplayed());
   }
-    
+
   searchInpt() {
     return browser.$('//*[@title="Поиск" and @aria-label="Найти"]');
   }
@@ -38,5 +41,3 @@ const assert = require("assert");
     });
   }
 }
-
-module.exports= googlePage;

@@ -1,7 +1,8 @@
-const basePage = require("./basePage");
+import basePage from "./basePage";
+
 const assert = require("assert");
 
- class samplePage extends basePage {
+export default class samplePage extends basePage {
   constructor() {
     super("localhost");
     this.title = "samplePage";
@@ -17,5 +18,3 @@ const assert = require("assert");
     });
   }
 }
-
-module.exports= samplePage;

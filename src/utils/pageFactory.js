@@ -1,10 +1,10 @@
-const googlePage = require("../pages/googlePage");
-const samplePage = require("../pages/samplePage");
+import googlePage from "../pages/googlePage";
+import samplePage from "../pages/samplePage";
 
-module.exports.page = function (type) {
+export const page = type => {
   const pages = {
-    googlePage: function() { return new googlePage() },
-    samplePage: () => { return new samplePage(); }
+    googlePage: () => new googlePage(),
+    samplePage: () => new samplePage()
   };
 
   return pages[type]();
