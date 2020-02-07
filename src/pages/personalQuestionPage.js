@@ -2,10 +2,10 @@ import basePage from "./basePage";
 
 const assert = require("assert");
 
-export default class samplePage extends basePage {
+export default class personalQuestionPage extends basePage {
   constructor() {
-    super("localhost");
-    this.title = "samplePage";
+    super("/");
+    this.title = "InvestEngine";
   }
 
   isLoaded() {

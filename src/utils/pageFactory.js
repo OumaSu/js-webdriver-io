@@ -1,10 +1,14 @@
-import googlePage from "../pages/googlePage";
 import samplePage from "../pages/samplePage";
+import getStartedPage from "../pages/getStartedPage";
+import mainPage from "../pages/mainPage";
+import productTypePage from "../pages/productTypePage";
 
-export const page = type => {
+export const getPage = type => {
   const pages = {
-    googlePage: () => new googlePage(),
-    samplePage: () => new samplePage()
+    samplePage: () => new samplePage(),
+    getStartedPage: () => new getStartedPage(),
+    mainPage: () => new mainPage(),
+    productTypePage: () => new productTypePage()
   };
 
   return pages[type]();

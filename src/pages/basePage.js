@@ -5,6 +5,7 @@ export default class basePage {
 
   open() {
     browser.navigateTo(this.url);
+    return this;
   }
   isLoaded() {
     browser.waitUntil(() => {});
