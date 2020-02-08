@@ -8,7 +8,6 @@ export default class productTypePage extends basePage {
     this.title = "InvestEngine";
   }
 
-
   getStartedByType(type) {
     const types = {
       personal: () => "Personal Account",

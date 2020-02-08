@@ -1,11 +1,15 @@
-import basePage from "./basePage";
+import basePage from "../basePage";
 
 const assert = require("assert");
 
-export default class personalQuestionPage extends basePage {
+export default class uncertainReturnsPage extends basePage {
   constructor() {
-    super("/");
+    super("https://rscwealth.com/onboarding/guaranteed-vs-uncertain-returns/");
     this.title = "InvestEngine";
+  }
+
+  selectReturn(type) {
+    browser.$(`//*[text() = "${type}"]`).click();
   }
 
   isLoaded() {

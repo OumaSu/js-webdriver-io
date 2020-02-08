@@ -132,7 +132,7 @@ exports.config = {
   // See the full list at http://mochajs.org/
   mochaOpts: {
     ui: "bdd",
-    require: ['@babel/register'],
+    require: ["@babel/register"],
     timeout: 1000000
   }
   //
